@@ -20,7 +20,11 @@
 
     <script src="https://vjs.zencdn.net/7.4.1/video.js"></script>
     <script>
-        let player = videojs("text-tracks-player");
+        let player = videojs("text-tracks-player", {
+            html5: {
+                nativeTextTracks: false
+            }
+        });
     </script>
 
 </body>
