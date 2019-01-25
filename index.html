@@ -71,7 +71,7 @@
             src: 'https://www.rts.ch/x/sub/journ-19h30-s/2019/journ-19h30-s_20190125_full_500039184.vtt'
         }, false);
 
-        document.querySelector("#hls").addEventListener(() => {
+        document.querySelector("#hls").addEventListener("click", () => {
             if (playerHls.paused()) {
                 playerHls.play();
                 return;
@@ -81,7 +81,7 @@
 
         });
 
-        document.querySelector("#hd").addEventListener(() => {
+        document.querySelector("#hd").addEventListener("click", () => {
             if (playerHd.paused()) {
                 playerHd.play();
                 return;
