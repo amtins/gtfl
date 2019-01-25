@@ -1,0 +1,26 @@
+<head>
+    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+</head>
+
+<body>
+    <video id="text-tracks-player" class="video-js" controls preload="auto" width="640" height="264" poster="https://www.swissinfo.ch/srgscalableimage/44619122/scale/width/640"
+        data-setup="{}">
+        <source src="https://media-d.swissinfo.ch/videos/2019/01/03/190103_FoundInSpace_DidierQueloz_EN-44619120-720k.mp4"
+            type="video/mp4" label="HD" res="720">
+        <source src="https://media-d.swissinfo.ch/videos/2019/01/03/190103_FoundInSpace_DidierQueloz_EN-44619120-360k.mp4"
+            type="video/mp4" label="SD" res="360">
+        <track kind="captions" src="https://media.swissinfo.ch/videos/2019/01/09/181218_FoundInSpace_DidierQueloz_ITALIANO_44655880_2__1_.it-44668886.vtt"
+            srclang="it" label="Italiano">
+        <track kind="captions" src="https://media.swissinfo.ch/videos/2019/01/09/181227_FoundInSpace_DidierQueloz_DE_44619120_22.de-44667826.vtt"
+            srclang="de" label="Deutsch" default="">
+    </video>
+
+    <script src="https://vjs.zencdn.net/7.4.1/video.js"></script>
+    <script>
+        let player = videojs("text-tracks-player");
+    </script>
+
+</body>
