@@ -33,13 +33,13 @@
     <script>
         let player = videojs("text-tracks-player", {
             html5: {
-                nativeTextTracks: false
+                nativeTextTracks: videojs.browser.IS_IOS
             }
         });
 
         let playerHls = videojs("hls-text-tracks-player", {
             html5: {
-                nativeTextTracks: false
+                nativeTextTracks: videojs.browser.IS_IOS
             }
         });
 
@@ -56,7 +56,7 @@
 
         let playerHd = videojs("hd-text-tracks-player", {
             html5: {
-                nativeTextTracks: false
+                nativeTextTracks: videojs.browser.IS_IOS
             }
         });
 
