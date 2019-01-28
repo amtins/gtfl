@@ -37,6 +37,11 @@
     <video id="srf-ttml-player" class="video-js" controls preload="auto" width="640" height="264" poster="https://ws.srf.ch/asset/image/audio/7e18e733-622b-4bd5-9323-971239e49844/WEBVISUAL/1453477895.jpg"
         data-setup="{}">
     </video>
+    <br>
+    <br>
+    <video id="srf-vtt-player" class="video-js" controls preload="auto" width="640" height="264" poster="https://ws.srf.ch/asset/image/audio/7e18e733-622b-4bd5-9323-971239e49844/WEBVISUAL/1453477895.jpg"
+        data-setup="{}">
+    </video>
 
 
     <script src="https://vjs.zencdn.net/7.4.1/video.js"></script>
@@ -100,6 +105,26 @@
             label: "Deutsch",
             src: 'https://ws.srf.ch/subtitles/urn:srf:ais:video:d6301152-89b9-4081-a058-6f2c586fb008/subtitle.ttml'
         }, false);
+
+
+
+        let playerVtt = videojs("srf-vtt-player");
+
+        playerVtt.src(
+            "https://hdvodsrforigin-f.akamaihd.net/i/vod/ts20/2018/02/ts20_20180227_193000_9286472_v_webcast_h264_,q40,q10,q20,q30,q50,.mp4.csmil/master.m3u8?start=0.0&end=1531.28"
+        );
+
+        playerTtml.addRemoteTextTrack({
+            kind: "captions",
+            srclang: "de",
+            label: "Deutsch",
+            src: 'https://ws.srf.ch/subtitles/urn:srf:ais:video:d6301152-89b9-4081-a058-6f2c586fb008/subtitle.vtt'
+        }, false);
+
+
+
+
+
 
         document.querySelector("#hls").addEventListener("click", () => {
             if (playerHls.paused()) {
