@@ -118,12 +118,9 @@
 
 
         let playerVtt = videojs("srf-vtt-player", {
-            // html5: {
-            //     nativeTextTracks: true,
-            //     hls: {
-            //         overrideNative: !videojs.browser.IS_SAFARI
-            //     }
-            // },
+            html5: {
+                nativeTextTracks: videojs.browser.IS_IOS
+            }
         });
 
         playerVtt.src(
