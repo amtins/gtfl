@@ -82,7 +82,12 @@
             "https://srfvodhd-vh.akamaihd.net/i/vod/dokplus/2019/01/dokplus_20190124_225347_13303280_v_webcast_h264_,q40,q10,q20,q30,q50,q60,.mp4.csmil/master.m3u8?start=0.0&end=6697.24&hdnts=exp=1548437118~acl=/i/vod/dokplus/2019/01/dokplus_20190124_225347_13303280_v_webcast_h264_,q40,q10,q20,q30,q50,q60,.mp4.csmil/*~hmac=b077142e3bbe225040b22b17982d7102505ca1ad07422996edb2149bb0aaa159"
         );
 
-
+        playerSrf.addRemoteTextTrack({
+            kind: "captions",
+            srclang: "de",
+            label: "Deutsch",
+            src: 'https://ws.srf.ch/subtitles/urn:srf:ais:video:d6301152-89b9-4081-a058-6f2c586fb008/subtitle.ttml'
+        }, false);
 
         document.querySelector("#hls").addEventListener("click", () => {
             if (playerHls.paused()) {
